@@ -1,26 +1,24 @@
 class BarcodeRunner {
+    video;
     output;
     barcodeDetector;
     items;
-    video;
 
-    constructor(output) {
+    constructor(video, output) {
+        this.video = video;
         this.output = output;
+        console.log(this.video, this.output);
         // this.barcodeDetector = new BarcodeDetector();
         this.barcodeDetector = undefined;
         this.items = [];
-        this.video = document.createElement('video');
 
         this.init();
     }
 
     async init() {
         const mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
-
         this.video.srcObject = mediaStream;
         this.video.autoplay = true;
-
-        this.output.before(video);
 
         // this.renderLoop();
     }

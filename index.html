@@ -5,12 +5,19 @@
         <title>BarcodeDetector</title>
     </head>
     <body>
+        <video></video>
+        <button>Click</button>
         <ul class="barcodes"></ul>
 
         <script src="main.js"></script>
         <script>
-            const barcodeList = document.getElementsByClassName('barcodes')[0];
-            new BarcodeRunner(barcodeList);
+            const videoElements = document.getElementsByTagName('video');
+            const barcodeElements = document.getElementsByClassName('barcodes');
+            const buttonElements = document.getElementsByTagName('button');
+
+            buttonElements[0].addEventListener('click', () => {
+                new BarcodeRunner(videoElements[0], barcodeElements[0]);
+            });
         </script>
     </body>
 </html>
