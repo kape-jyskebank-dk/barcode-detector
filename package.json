@@ -1,0 +1,21 @@
+{
+    "name": "barcode-cam",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "server": "http-server ./dist",
+        "start": "tsc --watch",
+        "build": "tsc"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "barcode-detector": "^1.0.0",
+        "qr-scanner": "^1.3.0"
+    },
+    "devDependencies": {
+        "@types/node": "^16.11.7",
+        "typescript": "^4.5.2"
+    }
+}
