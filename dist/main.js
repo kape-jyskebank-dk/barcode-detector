@@ -4,7 +4,9 @@ class BarcodeRunner {
         if (this.videoElement != undefined)
             return;
         this.barcodeDetector = new window.BarcodeDetector();
-        this.mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
+        this.mediaStream = await navigator.mediaDevices.getUserMedia({
+            video: { facingMode: { exact: 'environment' } },
+        });
         this.videoElement = document.createElement('video');
         this.videoElement.srcObject = this.mediaStream;
         this.videoElement.autoplay = true;
