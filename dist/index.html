@@ -6,13 +6,13 @@
     </head>
     <body>
         <button>Scan QR</button>
-        <script src="/barcode-detector.umd.js"></script>
+        <script src="barcode-detector.umd.js"></script>
         <script>
             if (window.BarcodeDetector == undefined) {
                 window.BarcodeDetector = BarcodeDetectorPolyfill;
             }
         </script>
-        <script src="/main.js"></script>
+        <script src="main.js"></script>
         <script>
             const buttonElement = document.getElementsByTagName('button')[0];
             const barcodeRunner = new BarcodeRunner();
